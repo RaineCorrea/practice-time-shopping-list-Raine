@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Shopping List</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="main">
+            <section class="main__container container">
+                <h2 class="container__title">Shopping List</h2>
+
+                <form class="container__form form">
+                    <div class="form__inputs inputs">
+                        <div class="inputs__item__wrapper item__wrapper">
+                            <label class="item__wrapper__label" for="item__name">Item name</label>
+                            <input
+                                class="item__wrapper__item__input"
+                                type="text"
+                                name="item__name"
+                                id="item__name"
+                            />
+                        </div>
+
+                        <div class="inputs__quantity__wrapper">
+                            <button
+                                class="inputs__quantity__wrapper__button inputs__quantity__wrapper__decrement__button"
+                                type="button"
+                            ></button>
+                            <input
+                                class="inputs__quantity__wrapper__input"
+                                type="text"
+                                name="item__quantity"
+                                value="1"
+                                disabled
+                            />
+                            <button
+                                class="inputs__quantity__wrapper__button inputs__quantity__wrapper__increment__button"
+                                type="button"
+                            ></button>
+                        </div>
+                    </div>
+
+                    <button class="form__submit__button" type="submit">Add to list</button>
+                </form>
+
+                <div class="container__result">
+                    <div class="container__result__head">
+                        <strong>Item</strong>
+                        <strong>Quantity</strong>
+                    </div>
+                    <ul class="container__result__items"></ul>
+                </div>
+            </section>
+        </main>
+        <script src="bundle.js"></script>
+    </body>
+</html>
